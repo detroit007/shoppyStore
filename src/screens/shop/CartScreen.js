@@ -25,15 +25,15 @@ const CartScreen = () =>{
 
     return (
         <View style={styles.screen}>
-            <View style={styles.cartItem}>
-                <Text>Total: <Text style={{color: COLORS.primary}}>${totalAmount.toFixed(2)}</Text></Text>
+            <Card style={styles.cartItem}>
+                <Text>Total: <Text style={{color: COLORS.primary}}>${Math.round(totalAmount.toFixed(2)* 100)/ 100}</Text></Text>
                 <TouchableOpacity disabled={selectedItems.length > 0 ? false: true} style={styles.btn} activeOpacity={0.6} 
                     onPress={()=>{
                         dispatch(addOrder(selectedItems, totalAmount))
                 }}>
                     <Text style={styles.btnText}>Order Now</Text>
                 </TouchableOpacity>
-            </View>
+            </Card>
             <FlatList
                 data={selectedItems.sort((a,b)=> a.prodId > b.prodId ? 1 : -1)}
                 renderItem={({item})=>{
@@ -66,12 +66,6 @@ const styles = StyleSheet.create({
         marginHorizontal: 5,
         paddingVertical: 15,
         paddingHorizontal: 20,
-        elevation: 5,
-        borderRadius: 5,
-        shadowColor: 'black',
-        shadowOffset: {width: 0, heightl: 2},
-        shadowRadius: 5,
-        shadowOpacity: 0.21,
     },
     btn: {
         padding: 10,

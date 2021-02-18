@@ -5,6 +5,7 @@ import COLORS from "../constants/colors";
 import Icon from "react-native-vector-icons/Entypo";
 import BarIcon from "react-native-vector-icons/FontAwesome5";
 import UserProduct from "../src/screens/user/UserProduct";
+import EditProduct from "../src/screens/user/EditProduct";
 const UserProductStack = () =>{
     const Stack = createStackNavigator();
     return(
@@ -26,10 +27,20 @@ const UserProductStack = () =>{
                     component={UserProduct} 
                     options={({navigation})=>({
                         headerRight: ()=> <TouchableOpacity style={{paddingRight: 15}} activeOpacity={0.6} 
-                                onPress={()=>{navigation.navigate('CartScreen')}}>
+                                onPress={()=>{navigation.navigate('EditProduct', {productId: ''})}}>
                                 <Icon name='pencil' size={22} color='white' />
                             </TouchableOpacity>,
-                        
+                    })}
+                />
+                <Stack.Screen 
+                    name='EditProduct'
+                    component={EditProduct}
+                    options={({ route })=>({
+                        title: route.params.productId !== '' ?  "Edit Product" : "Add Product",
+                        headerRight: ()=> <TouchableOpacity style={{paddingRight: 15}} activeOpacity={0.6} 
+                                onPress={()=>{route.params.submit()}}>
+                                <Icon name='pencil' size={22} color='white' />
+                            </TouchableOpacity>,
                     })}
                 />
             </Stack.Navigator>

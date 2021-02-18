@@ -11,32 +11,33 @@ const ProductOverView = ({navigation}) =>{
     return(
         <FlatList
             data={products}
-            renderItem={({item})=> <ProductItem 
-                title={item.title} 
-                imageUrl={item.imageUrl} 
-                price={item.price}
-                onSelect={()=>{navigation.navigate('ProductDetails', {product: item})}}
-            >
-                <TouchableOpacity style={styles.btn} 
-                    onPress={()=>{
-                        navigation.navigate('ProductDetails', {product: item})}
-                    } 
-                    activeOpacity={0.6}
+            renderItem={({item})=> 
+                <ProductItem 
+                    title={item.title} 
+                    imageUrl={item.imageUrl} 
+                    price={item.price}
+                    onSelect={()=>{navigation.navigate('ProductDetails', {product: item})}}
                 >
-                    <Text style={styles.btnText}>View Detail</Text>
-                </TouchableOpacity>
+                    <TouchableOpacity style={styles.btn} 
+                        onPress={()=>{
+                            navigation.navigate('ProductDetails', {product: item})}
+                        } 
+                        activeOpacity={0.6}
+                    >
+                        <Text style={styles.btnText}>View Detail</Text>
+                    </TouchableOpacity>
 
-                <TouchableOpacity style={styles.btn} 
-                    onPress={()=>{
-                        dispatch(addToCart(item))}
-                    } 
-                    activeOpacity={0.6}
-                >
-                    <Text style={styles.btnText}>To Cart</Text>
-                </TouchableOpacity>
-            </ProductItem>
+                    <TouchableOpacity style={styles.btn} 
+                        onPress={()=>{
+                            dispatch(addToCart(item))}
+                        } 
+                        activeOpacity={0.6}
+                    >
+                        <Text style={styles.btnText}>To Cart</Text>
+                    </TouchableOpacity>
+                </ProductItem>
             }
-            keyExtractor={item => item.id}
+            keyExtractor={(item, index) => item + index}
         />
     )
 }

@@ -1,11 +1,10 @@
 import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createDrawerNavigator } from "@react-navigation/drawer";
-import OrderScreen from "../src/screens/shop/OrderScreen";
 import HomeStack from "./HomeStack";
 import UserProductStack from "./UserProductStack";
 import Icon from "react-native-vector-icons/Entypo";
-import colors from "../constants/colors";
+import OrderStack from "./OrderStack";
 
 
 const DrawerNavigator = () =>{
@@ -19,7 +18,7 @@ const DrawerNavigator = () =>{
                         drawerIcon: ({color})=> <Icon name='pencil' size={22} color={color} />
                     }}
                 />
-                <Drawer.Screen name='OrderScreen' component={OrderScreen} />
+                <Drawer.Screen name='OrderScreen' component={OrderStack} />
                 <Drawer.Screen name='Admin' component={UserProductStack} />
             </Drawer.Navigator>
         </NavigationContainer>

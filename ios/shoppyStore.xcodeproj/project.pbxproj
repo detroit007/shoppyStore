@@ -32,6 +32,10 @@
 		46BF6FDF99044DB0AE700C74 /* Octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3CE7B23425F64C76A2977F40 /* Octicons.ttf */; };
 		FB3179A4BBC344D19FB300CA /* SimpleLineIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5358634541154B8EB57656C1 /* SimpleLineIcons.ttf */; };
 		6910B5E9C5FF4941A7F608BD /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E40B5B3A3F2D4F36B29E2128 /* Zocial.ttf */; };
+		F284452B85754BBFB3202CD2 /* coolvetica-rg.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 99AD49601A6E44DC8774A9BA /* coolvetica-rg.ttf */; };
+		4EDC10BE344C43C6A8A55C43 /* coolveticaCompressed-rg.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1AA9E27505E04122B4C2473D /* coolveticaCompressed-rg.ttf */; };
+		3A7BD236258444FFAF32713E /* coolveticaCondensed-rg.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 17CC2F65866E488AAF3724D4 /* coolveticaCondensed-rg.ttf */; };
+		23BAB92FFBB64838A72D27C7 /* coolveticaCrammed-rg.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EFB8C99410C24FCDA8C1CA35 /* coolveticaCrammed-rg.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +87,10 @@
 		3CE7B23425F64C76A2977F40 /* Octicons.ttf */ = {isa = PBXFileReference; name = "Octicons.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/Octicons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		5358634541154B8EB57656C1 /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; name = "SimpleLineIcons.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/SimpleLineIcons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		E40B5B3A3F2D4F36B29E2128 /* Zocial.ttf */ = {isa = PBXFileReference; name = "Zocial.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/Zocial.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		99AD49601A6E44DC8774A9BA /* coolvetica-rg.ttf */ = {isa = PBXFileReference; name = "coolvetica-rg.ttf"; path = "../assets/fonts/coolvetica-rg.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		1AA9E27505E04122B4C2473D /* coolveticaCompressed-rg.ttf */ = {isa = PBXFileReference; name = "coolveticaCompressed-rg.ttf"; path = "../assets/fonts/coolveticaCompressed-rg.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		17CC2F65866E488AAF3724D4 /* coolveticaCondensed-rg.ttf */ = {isa = PBXFileReference; name = "coolveticaCondensed-rg.ttf"; path = "../assets/fonts/coolveticaCondensed-rg.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		EFB8C99410C24FCDA8C1CA35 /* coolveticaCrammed-rg.ttf */ = {isa = PBXFileReference; name = "coolveticaCrammed-rg.ttf"; path = "../assets/fonts/coolveticaCrammed-rg.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -209,6 +217,10 @@
 				3CE7B23425F64C76A2977F40 /* Octicons.ttf */,
 				5358634541154B8EB57656C1 /* SimpleLineIcons.ttf */,
 				E40B5B3A3F2D4F36B29E2128 /* Zocial.ttf */,
+				99AD49601A6E44DC8774A9BA /* coolvetica-rg.ttf */,
+				1AA9E27505E04122B4C2473D /* coolveticaCompressed-rg.ttf */,
+				17CC2F65866E488AAF3724D4 /* coolveticaCondensed-rg.ttf */,
+				EFB8C99410C24FCDA8C1CA35 /* coolveticaCrammed-rg.ttf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -368,6 +380,10 @@
 				46BF6FDF99044DB0AE700C74 /* Octicons.ttf in Resources */,
 				FB3179A4BBC344D19FB300CA /* SimpleLineIcons.ttf in Resources */,
 				6910B5E9C5FF4941A7F608BD /* Zocial.ttf in Resources */,
+				F284452B85754BBFB3202CD2 /* coolvetica-rg.ttf in Resources */,
+				4EDC10BE344C43C6A8A55C43 /* coolveticaCompressed-rg.ttf in Resources */,
+				3A7BD236258444FFAF32713E /* coolveticaCondensed-rg.ttf in Resources */,
+				23BAB92FFBB64838A72D27C7 /* coolveticaCrammed-rg.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

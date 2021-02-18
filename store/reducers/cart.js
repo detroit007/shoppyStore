@@ -1,6 +1,8 @@
+import { act } from "react-test-renderer";
 import CartItem from "../../models/cart-item";
 import { ADD_TO_CART, REMOVE_FROM_CART } from "../actions/cart";
 import { ADD_ORDER } from "../actions/orders";
+import { DELETE_PRODUCT } from "../actions/product";
 
 const initailaState = {
     items: {},
@@ -51,6 +53,18 @@ const cartReducer = (state = initailaState, action) =>{
             }
         case ADD_ORDER:
             return initailaState;
+        case DELETE_PRODUCT: 
+            if(!state.items[action.pid]){
+                return state;
+            }
+            const productItems = {...state.items};
+            const itemTotal = productItems[action.pid].sum;
+            delete productItems[action.pid];
+            return{
+                ...state,
+                items: productItems,
+                totalAmount: state.totalAmount - itemTotal
+            }
         default :
             return state;
     }
